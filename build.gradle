@@ -22,13 +22,11 @@ ext {//gradle의 확장 속성(메타 데이터, 전역 변수) 정의. 전체 �
 }
 
 dependencies {
-    implementation('org.springframework.boot:spring-boot-starter-web') {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
-    }
+    implementation 'org.springframework.cloud:spring-cloud-starter-config'
+    implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
     implementation('org.springframework.boot:spring-boot-starter-undertow') {
         exclude group: "io.undertow", module: "undertow-websockets-jsr"
     }
-    implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
 }
 
 dependencyManagement {//종속성 버전 관리를 중앙에서 하고 싶을 때 사용. 특정 라이브러리의 버전을 일관되게 관리 가능. 'io.spring.dependency-management' 플러그인을 임포트 후 사용할 수 있다.
