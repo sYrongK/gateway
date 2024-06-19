@@ -1,6 +1,6 @@
 spring:
   application:
-    name: default, gateway, eureka-client
+    name: default, gateway
   config:
     activate:
       on-profile: local
